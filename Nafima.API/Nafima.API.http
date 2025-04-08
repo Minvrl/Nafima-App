@@ -1,0 +1,6 @@
+@Nafima.API_HostAddress = http://localhost:5066
+
+GET {{Nafima.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
