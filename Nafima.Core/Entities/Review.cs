@@ -17,6 +17,7 @@ namespace Nafima.Core.Entities
         [MaxLength(40)]
 
         public string Position { get; set; }
+        
 
     }
 }

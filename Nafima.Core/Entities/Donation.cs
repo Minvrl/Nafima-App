@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nafima.Core.Entities
 {
-    public class Donation
+    public class Donation:AuditEntity
     {
         public bool OneTime { get; set; }
         public string? FullName { get; set; }
