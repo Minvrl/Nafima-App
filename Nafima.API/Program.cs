@@ -50,21 +50,21 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 
 
 builder.Services.AddScoped<IDonationRepository, DonationRepository>();
-
+builder.Services.AddScoped<IDonationService, DonationService>();
 builder.Services.AddScoped<IFAQRepository,FAQRepository>();
 builder.Services.AddScoped<IFAQService, FAQService>();
 builder.Services.AddScoped<IPartnershipRepository, PartnershipRepository>();
-
+builder.Services.AddScoped<IPartnershipService, PartnershipService>();
 builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
-
+builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 
 builder.Services.AddScoped<ISettingRepository, SettingRepository>();
-
+builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<ISliderRepository, SliderRepository>();
-
+builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IStatisticRepository, StatisticRepository>();
-
+builder.Services.AddScoped<IStatisticService,StatisticService>();
 
 builder.Services.AddFluentValidationRulesToSwagger();
 
