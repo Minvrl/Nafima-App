@@ -11,5 +11,6 @@ namespace Nafima.Service.Interfaces
     {
         int Create(DonationCreateDto createDto);
         List<DonationGetDto> GetAll();
+        void Delete(int id);
     }
 }

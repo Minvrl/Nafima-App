@@ -27,5 +27,12 @@ namespace Nafima.API.Controllers
         {
             return StatusCode(201, new { Id = _donationService.Create(createDto) });
         }
+
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            _donationService.Delete(id);
+            return NoContent();
+        }
     }
 }

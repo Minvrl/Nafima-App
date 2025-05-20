@@ -37,5 +37,16 @@ namespace Nafima.Service.Implementations
         {
             return _mapper.Map<List<DonationGetDto>>(_repository.GetAll(x => !x.IsDeleted).ToList());
         }
+        public void Delete(int id)
+        {
+            Donation entity = _repository.Get(x => x.Id == id && !x.IsDeleted);
+
+            if (entity == null) throw new RestException(StatusCodes.Status404NotFound, "Donation not found");
+
+            entity.IsDeleted = true;
+            entity.ModifiedAt = DateTime.Now;
+            _repository.Save();
+        }
+
     }
 }
